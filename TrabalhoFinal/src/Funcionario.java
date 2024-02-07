@@ -73,14 +73,4 @@ public class Funcionario extends Pessoa {
     public void setDataIngressoEmpresa(LocalDate dataIngressoEmpresa) {
         this.dataIngressoEmpresa = dataIngressoEmpresa;
     }
-
-    public double calculaSalario(){
-        LocalDate hoje = LocalDate.now();
-        Period periodo = Period.between(dataIngressoEmpresa, hoje);
-        int anos = periodo.getYears();
-        if(anos < 15)
-            return salario;
-        else
-            return salario*10;
-    }
 }
